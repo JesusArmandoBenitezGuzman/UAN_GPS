@@ -29,17 +29,17 @@ public class Principal extends javax.swing.JFrame {
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
+        btnCarga = new javax.swing.JMenu();
         Carreras = new javax.swing.JMenuItem();
         Maestros = new javax.swing.JMenuItem();
         Materias = new javax.swing.JMenuItem();
         Alumnos = new javax.swing.JMenuItem();
+        jMenuItem3 = new javax.swing.JMenuItem();
         Calificaciones = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem7 = new javax.swing.JMenuItem();
         jMenuItem8 = new javax.swing.JMenuItem();
-        jMenuItem9 = new javax.swing.JMenuItem();
-        jMenuItem10 = new javax.swing.JMenuItem();
+        btnKardex = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Universidad Autonoma De Nayarit");
@@ -71,8 +71,8 @@ public class Principal extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu1);
 
-        jMenu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/configurar.png"))); // NOI18N
-        jMenu2.setText("Mantenimiento");
+        btnCarga.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/configurar.png"))); // NOI18N
+        btnCarga.setText("Mantenimiento");
 
         Carreras.setText("Carreras");
         Carreras.addActionListener(new java.awt.event.ActionListener() {
@@ -80,7 +80,7 @@ public class Principal extends javax.swing.JFrame {
                 CarrerasActionPerformed(evt);
             }
         });
-        jMenu2.add(Carreras);
+        btnCarga.add(Carreras);
 
         Maestros.setText("Maestros");
         Maestros.addActionListener(new java.awt.event.ActionListener() {
@@ -88,7 +88,7 @@ public class Principal extends javax.swing.JFrame {
                 MaestrosActionPerformed(evt);
             }
         });
-        jMenu2.add(Maestros);
+        btnCarga.add(Maestros);
 
         Materias.setText("Materias");
         Materias.addActionListener(new java.awt.event.ActionListener() {
@@ -96,7 +96,7 @@ public class Principal extends javax.swing.JFrame {
                 MateriasActionPerformed(evt);
             }
         });
-        jMenu2.add(Materias);
+        btnCarga.add(Materias);
 
         Alumnos.setText("Alumnos");
         Alumnos.addActionListener(new java.awt.event.ActionListener() {
@@ -104,7 +104,15 @@ public class Principal extends javax.swing.JFrame {
                 AlumnosActionPerformed(evt);
             }
         });
-        jMenu2.add(Alumnos);
+        btnCarga.add(Alumnos);
+
+        jMenuItem3.setText("Carga de materias");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
+        btnCarga.add(jMenuItem3);
 
         Calificaciones.setText("Calificaciones");
         Calificaciones.addActionListener(new java.awt.event.ActionListener() {
@@ -112,9 +120,9 @@ public class Principal extends javax.swing.JFrame {
                 CalificacionesActionPerformed(evt);
             }
         });
-        jMenu2.add(Calificaciones);
+        btnCarga.add(Calificaciones);
 
-        jMenuBar1.add(jMenu2);
+        jMenuBar1.add(btnCarga);
 
         jMenu3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/pdf.png"))); // NOI18N
         jMenu3.setText("Reportes");
@@ -125,11 +133,13 @@ public class Principal extends javax.swing.JFrame {
         jMenuItem8.setText("Materias");
         jMenu3.add(jMenuItem8);
 
-        jMenuItem9.setText("Calificaciones");
-        jMenu3.add(jMenuItem9);
-
-        jMenuItem10.setText("Kardex");
-        jMenu3.add(jMenuItem10);
+        btnKardex.setText("Kardex");
+        btnKardex.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnKardexActionPerformed(evt);
+            }
+        });
+        jMenu3.add(btnKardex);
 
         jMenuBar1.add(jMenu3);
 
@@ -177,6 +187,16 @@ public class Principal extends javax.swing.JFrame {
         CarreraForm cf=new CarreraForm();
         CentrarVentana(cf);
     }//GEN-LAST:event_CarrerasActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        HorarioForm hf=new HorarioForm();
+        CentrarVentana(hf);
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void btnKardexActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKardexActionPerformed
+        KardexForm kf=new KardexForm();
+        CentrarVentana(kf);
+    }//GEN-LAST:event_btnKardexActionPerformed
     
     void CentrarVentana(JInternalFrame frame){
         VentanaPrincipal.add(frame);
@@ -193,15 +213,15 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenuItem Maestros;
     private javax.swing.JMenuItem Materias;
     private javax.swing.JDesktopPane VentanaPrincipal;
+    private javax.swing.JMenu btnCarga;
+    private javax.swing.JMenuItem btnKardex;
     private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem10;
     private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem7;
     private javax.swing.JMenuItem jMenuItem8;
-    private javax.swing.JMenuItem jMenuItem9;
     // End of variables declaration//GEN-END:variables
 }

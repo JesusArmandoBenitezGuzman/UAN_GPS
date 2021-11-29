@@ -1,10 +1,9 @@
 package modelo;
 
-public class EntidadMaestro {
-    String idmaestro;
+public class EntidadAlumno {
+    
+    String nocontrol;
     String idcarrera;
-    String usuario;
-    String contrasena;
     String nombre;
     String apellidop;
     String apellidom;
@@ -15,14 +14,12 @@ public class EntidadMaestro {
     String estado;
     String cp;
 
-    public EntidadMaestro() {
+    public EntidadAlumno() {
     }
 
-    public EntidadMaestro(String idmaestro, String idcarrera, String usuario, String contrasena, String nombre, String apellidop, String apellidom, String calle, String numero, String colonia, String municipio, String estado, String cp) {
-        this.idmaestro = idmaestro;
+    public EntidadAlumno(String nocontrol, String idcarrera, String nombre, String apellidop, String apellidom, String calle, String numero, String colonia, String municipio, String estado, String cp) {
+        this.nocontrol = nocontrol;
         this.idcarrera = idcarrera;
-        this.usuario = usuario;
-        this.contrasena = contrasena;
         this.nombre = nombre;
         this.apellidop = apellidop;
         this.apellidom = apellidom;
@@ -34,12 +31,12 @@ public class EntidadMaestro {
         this.cp = cp;
     }
 
-    public String getIdmaestro() {
-        return idmaestro;
+    public String getNocontrol() {
+        return nocontrol;
     }
 
-    public void setIdmaestro(String idmaestro) {
-        this.idmaestro = idmaestro;
+    public void setNocontrol(String nocontrol) {
+        this.nocontrol = nocontrol;
     }
 
     public String getIdcarrera() {
@@ -48,24 +45,6 @@ public class EntidadMaestro {
 
     public void setIdcarrera(String idcarrera) {
         this.idcarrera = idcarrera;
-    }
-    
-    
-
-    public String getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
-    }
-
-    public String getContrasena() {
-        return contrasena;
-    }
-
-    public void setContrasena(String contrasena) {
-        this.contrasena = contrasena;
     }
 
     public String getNombre() {
